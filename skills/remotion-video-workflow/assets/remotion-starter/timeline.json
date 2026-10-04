@@ -1,0 +1,6 @@
+{
+  "fps": 30,
+  "durationInFrames": 180,
+  "scenes": [{"id":"gradient-descent","startFrame":0,"durationInFrames":180}],
+  "lines": []
+}

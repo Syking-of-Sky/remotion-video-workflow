@@ -1,0 +1,14 @@
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+renders/
+outputs/
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.ncm
+.env
+.env.*

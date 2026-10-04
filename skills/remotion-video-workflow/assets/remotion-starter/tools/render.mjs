@@ -1,0 +1,13 @@
+import {spawnSync} from 'node:child_process';
+import {createRequire} from 'node:module';
+import fs from 'node:fs';
+import path from 'node:path';
+const require=createRequire(import.meta.url);
+fs.mkdirSync('renders',{recursive:true});
+const cli=path.join(path.dirname(require.resolve('@remotion/cli/package.json')),'remotion-cli.js');
+const args=[cli,'render','src/index.ts','Example','renders/example.mp4','--codec=h264','--crf=18'];
+if(process.env.REMOTION_BROWSER_EXECUTABLE)args.push(`--browser-executable=${process.env.REMOTION_BROWSER_EXECUTABLE}`);
+args.push(...process.argv.slice(2));
+const result=spawnSync(process.execPath,args,{stdio:'inherit'});
+if(result.error)throw result.error;
+process.exit(result.status??1);

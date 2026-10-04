@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remotion 视频工作流"
+  short_description: "制作歌词 MV、科普动画与循环短片，完成素材一致性、时间轴和成片验证"
+  default_prompt: "使用 $remotion-video-workflow 制作视频，并交付成片、预览和可编辑工程。"
